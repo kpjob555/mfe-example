@@ -1,4 +1,5 @@
 import { useItems } from "@elysiannxt/utils";
+import List from "@elysiannxt/list";
 
 export default function Root(props) {
   const { items, onBuy, toggleShowCart } = useItems();
@@ -10,11 +11,12 @@ export default function Root(props) {
         border: "1px solid white",
         borderRadius: 10,
         overflow: "hidden",
+        background: "rgba(255,255,255, 0.4)",
       }}
     >
       <div
         style={{
-          color: "blue",
+          color: "#555",
           fontSize: 18,
           width: "100%",
           display: "flex",
@@ -27,7 +29,9 @@ export default function Root(props) {
         {items.length === 0 ? (
           <div>No items in your cart</div>
         ) : (
-          <div>Now you have {items.length} items in cart</div>
+          <div>
+            Now you have <b>{items.length}</b> items in cart
+          </div>
         )}
         <div
           style={{ position: "absolute", right: 10, cursor: "pointer" }}
@@ -37,32 +41,33 @@ export default function Root(props) {
         </div>
       </div>
       {items.length > 0 && (
-        <div style={{ margin: 20 }}>
-          {items.map((item, index) => (
-            <div
-              style={{ fontSize: 12, color: "#fff", margin: "3px 0px" }}
-              key={index}
-            >
-              {item.name}
-            </div>
-          ))}
-          {items.length > 0 && (
-            <div>
-              <button
-                style={{
-                  width: 60,
-                  height: 20,
-                  marginTop: 20,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-                onClick={onBuy}
-              >
-                Buy
-              </button>
-            </div>
-          )}
+        <div
+          style={{
+            maxHeight: 300,
+            height: 100,
+            overflowY: "auto",
+            marginTop: 20,
+          }}
+        >
+          <List items={items} />
+        </div>
+      )}
+
+      {items.length > 0 && (
+        <div>
+          <button
+            style={{
+              width: 60,
+              height: 20,
+              margin: "20px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            onClick={onBuy}
+          >
+            Buy
+          </button>
         </div>
       )}
     </section>

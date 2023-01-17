@@ -12,28 +12,31 @@ const Layout2 = ({ children }) => {
         background: "green",
         width: "100%",
         height: "100%",
+        border: "1px solid #000",
+        borderRadius: "20px",
+        overflow: "hidden",
       }}
     >
       <div
         style={{
-          background: "black",
+          background: "rgba(0,0,0,0.5)",
           color: "#fff",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          padding: "0px 14px",
         }}
       >
         <div style={{ padding: "4px 8px", fontWeight: 500, fontSize: 20 }}>
           Job Shop
         </div>
-        {/* <div style={{ padding: "4px 8px" }}>Shop</div> */}
         <div
-          style={{ padding: "4px 8px" }}
+          style={{ padding: "4px 8px", cursor: "pointer" }}
           onClick={() => {
             toggleShowCart();
           }}
         >
-          Cart {items.length > 0 ? `(${items.length})` : null}
+          Display Cart {items.length > 0 ? `(${items.length})` : null}
         </div>
       </div>
       {showCart && (

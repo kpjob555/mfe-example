@@ -1,33 +1,24 @@
-import { useItems } from "@elysiannxt/utils";
-
 export default function Root(props) {
-  const { addItem } = useItems();
-  // const { addItem } = props;
-  // console.log("🐱 👉🏼 Root 👉🏼 addItem", addItem);
-
-  const itemList = [
-    { name: "Ice Lemon Tea" },
-    { name: "Milk Tea" },
-    { name: "Coffee" },
-    { name: "Water" },
-    { name: "Herb" },
-  ];
+  const { onItemClick, items } = props;
 
   return (
     <div>
       <ul>
-        {itemList.map((item, index) => (
+        {items.map((item, index) => (
           <li
             key={index}
-            onClick={() => addItem(item)}
+            onClick={() => {
+              if (onItemClick) onItemClick(item);
+            }}
             style={{
-              cursor: "pointer",
+              cursor: onItemClick ? "pointer" : "default",
               border: "1px solid #fff",
               width: 140,
-              padding: "4px 10px",
-              margin: "3px 0px",
+              padding: "2px 10px",
+              margin: "0px 0px 4px 0px",
               borderRadius: 20,
               color: "#fff",
+              background: "rgba(255,255,255, 0.25)",
             }}
           >
             <span>{item.name}</span>
