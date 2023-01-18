@@ -3,8 +3,7 @@ const singleSpaDefaults = require("webpack-config-single-spa");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
-// const importMapPath = path.resolve(__dirname, "src", "importMap.json");
-const importMapPath = "src/importMap.json";
+const envPath = "src/env.js";
 
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "elysiannxt";
@@ -32,8 +31,8 @@ module.exports = (webpackConfigEnv, argv) => {
       new CopyPlugin({
         patterns: [
           {
-            from: importMapPath,
-            to: "importMap.json",
+            from: envPath,
+            to: "env.js",
           },
         ],
       }),
