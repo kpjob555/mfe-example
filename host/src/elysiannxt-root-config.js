@@ -1,8 +1,9 @@
 import { registerApplication, start } from "single-spa";
 
-const importMap = require("./importMap.json");
+const applications = window.env.APPLICATIONS;
+const importMap = window.env.IMPORT_MAP;
 
-importMap.applications.forEach((application) => {
+applications.forEach((application) => {
   registerApplication({
     name: application.name,
     app: () => System.import(importMap.imports[application.name]),
