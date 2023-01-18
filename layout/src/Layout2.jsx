@@ -29,7 +29,7 @@ const Layout2 = ({ children }) => {
           }}
         >
           <div style={{ padding: "4px 8px", fontWeight: 500, fontSize: 20 }}>
-            Layout 2 MFE
+            Layout MFE
           </div>
           <div
             style={{ padding: "4px 8px", cursor: "pointer" }}
@@ -53,7 +53,20 @@ const Layout2 = ({ children }) => {
           textAlign: "right",
         }}
       >
-        <a href="/about">About</a>
+        <a
+          style={{
+            fontSize: 14,
+            padding: "4px 16px",
+            width: 40,
+            border: "1px solid white",
+            borderRadius: 10,
+            color: "white",
+            textDecoration: "none",
+          }}
+          href="/about"
+        >
+          About
+        </a>
       </div>
     </div>
   );

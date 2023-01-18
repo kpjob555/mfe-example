@@ -30,8 +30,23 @@ const Content = () => {
           color: "#fff",
           display: "flex",
           justifyContent: "center",
+          position: "relative",
         }}
       >
+        <div
+          style={{
+            color: "white",
+            fontSize: 10,
+            border: "1px solid white",
+            padding: "1px 4px",
+            borderRadius: 10,
+            left: 20,
+            position: "absolute",
+            top: "2px",
+          }}
+        >
+          Shop MFE
+        </div>
         Available Shopping Items
       </div>
       <List items={itemList} onItemClick={addItem} />
