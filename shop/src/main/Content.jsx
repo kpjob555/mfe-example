@@ -16,9 +16,9 @@ const Content = () => {
   return (
     <div
       style={{
-        border: "1px solid #fff",
+        border: "1px solid rgb(0, 113,180)",
         borderRadius: "20px",
-        background: "rgba(255,255,255, 0.25)",
+        background: "#99C6DC",
         overflow: "hidden",
       }}
     >
@@ -26,8 +26,8 @@ const Content = () => {
         style={{
           width: "100%",
           height: 20,
-          background: "#fff",
-          color: "#005586",
+          background: "rgb(0, 113,180)",
+          color: "#fff",
           display: "flex",
           justifyContent: "center",
         }}

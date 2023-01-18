@@ -9,10 +9,10 @@ const Layout2 = ({ children }) => {
   return (
     <div
       style={{
-        background: "green",
+        background: "#3bd100",
         width: "100%",
         height: "100%",
-        border: "1px solid #000",
+        border: "2px solid #3a6900",
         borderRadius: "20px",
         overflow: "hidden",
       }}
@@ -28,7 +28,7 @@ const Layout2 = ({ children }) => {
         }}
       >
         <div style={{ padding: "4px 8px", fontWeight: 500, fontSize: 20 }}>
-          Job Shop
+          Layout 2 MFE
         </div>
         <div
           style={{ padding: "4px 8px", cursor: "pointer" }}

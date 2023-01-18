@@ -8,24 +8,37 @@ export default function Root(props) {
     <section
       style={{
         margin: 10,
-        border: "1px solid white",
+        border: "1px solid black",
         borderRadius: 10,
         overflow: "hidden",
-        background: "rgba(255,255,255, 0.4)",
+        background: "rgba(0,0,0, 0.4)",
       }}
     >
       <div
         style={{
-          color: "#555",
+          color: "#fff",
           fontSize: 18,
           width: "100%",
           display: "flex",
           justifyContent: "center",
           height: 20,
-          background: "white",
+          background: "rgba(0,0,0,0.8)",
           position: "relative",
         }}
       >
+        <div
+          style={{
+            padding: "0px 10px",
+            position: "absolute",
+            left: 0,
+            background: "rgba(255,255,255,0.3)",
+            height: "100%",
+            color: "#fff",
+            borderRadius: "0px 20px 20px 0px",
+          }}
+        >
+          Cart MFE
+        </div>
         {items.length === 0 ? (
           <div>No items in your cart</div>
         ) : (
