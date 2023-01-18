@@ -1,7 +1,7 @@
 {
-  "name": "@elysiannxt/layout",
+  "name": "@elysiannxt/about",
   "scripts": {
-    "start": "webpack serve --port 8080",
+    "start": "webpack serve",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently yarn:build:*",
     "build:webpack": "webpack --mode=production",
@@ -13,7 +13,7 @@
     "watch-tests": "cross-env BABEL_ENV=test jest --watch",
     "prepare": "husky install",
     "coverage": "cross-env BABEL_ENV=test jest --coverage",
-    "serve": "serve -s dist -p 8180"
+    "serve": "serve -s dist -p 8185"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -44,14 +44,8 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.11.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router": "^6.6.2",
-    "react-router-dom": "^6.6.2",
     "single-spa-react": "^4.3.1"
   }
 }

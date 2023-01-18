@@ -47,23 +47,7 @@
 
     <!-- Add your organization's prod import map URL to this script's src  -->
     <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
-
-    <% if (isLocal) { %>
-    <script type="systemjs-importmap">
-      {
-        "imports": {
-          "@elysiannxt/root-config": "//localhost:9005/elysiannxt-root-config.js",
-          "@elysiannxt/layout": "http://localhost:8080/elysiannxt-layout.js",
-          "@elysiannxt/shop": "http://localhost:8081/elysiannxt-shop.js",
-          "@elysiannxt/cart": "http://localhost:8082/elysiannxt-cart.js",
-          "@elysiannxt/utils": "http://localhost:8083/elysiannxt-utility.js",
-          "@elysiannxt/list": "http://localhost:8084/elysiannxt-list.js",
-          "react": "https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js",
-          "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"
-        }
-      }
-    </script>
-    <% } %>
+    <script type="systemjs-importmap" src="/importMap.json"></script>
 
     <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
@@ -73,11 +57,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
     <% if (isLocal) { %>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.13.0/dist/system.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.13.0/dist/extras/amd.js"></script>
     <% } else { %>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.13.0/dist/system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.13.0/dist/extras/amd.min.js"></script>
     <% } %>
   </head>
   <body>
